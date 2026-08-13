@@ -473,3 +473,193 @@ a{ color:inherit; }
 @media (prefers-reduced-motion: reduce){
   .zjawia{ opacity:1; transform:none; transition:none; }
 }
+
+
+/* =========================================================
+   Newsletter jako główny cel: szybki zapis w hero
+   ========================================================= */
+
+.hero__zapis{
+  margin-top:2.25rem; padding-top:1.75rem;
+  border-top:1px solid var(--linia);
+}
+.hero__zapis .etykieta{ margin-bottom:1rem; padding-bottom:0; }
+.hero__zapis .etykieta::before,
+.hero__zapis .etykieta::after{ content:none; }
+
+.szybki{
+  display:flex; flex-wrap:wrap; gap:.75rem 1rem; align-items:stretch;
+  max-width:520px;
+}
+.szybki input[type="email"]{
+  flex:1 1 240px; min-width:0;
+  background:var(--papier);
+  border:1px solid rgba(21,24,26,.2);
+  color:var(--granit);
+  font-family:var(--ff-body); font-size:1.0625rem;
+  padding:1em 1.1em;
+  transition:border-color .2s ease;
+}
+.szybki input[type="email"]::placeholder{ color:var(--kamien); }
+.szybki input[type="email"]:focus{ outline:none; border-color:var(--khaki); }
+.szybki .btn{ flex:0 0 auto; }
+
+.drobne--jasne{ color:var(--kamien); max-width:52ch; margin-top:1rem; }
+.drobne--jasne a{ color:var(--granit); text-decoration:none; border-bottom:1px solid var(--khaki); }
+
+.komunikat--jasny{ color:var(--granit); max-width:52ch; margin-top:1.25rem; }
+
+/* =========================================================
+   Pop-up newslettera
+   ========================================================= */
+
+.modal{
+  position:fixed; inset:0; z-index:200;
+  background:rgba(21,24,26,.55);
+  display:flex; align-items:center; justify-content:center;
+  padding:clamp(1rem,4vw,2.5rem);
+}
+.modal[hidden]{ display:none; }
+
+.modal__box{
+  position:relative;
+  width:100%; max-width:480px;
+  background:var(--swierk); color:rgba(234,235,231,.8);
+  padding:clamp(1.75rem,4vw,2.75rem);
+  box-shadow:0 30px 80px rgba(21,24,26,.45);
+  max-height:88vh; overflow-y:auto;
+  animation:modal-wejscie .32s ease both;
+}
+@keyframes modal-wejscie{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+@media (prefers-reduced-motion: reduce){ .modal__box{ animation:none; } }
+
+.modal__box h2{ color:var(--mgla); font-size:clamp(1.375rem,3vw,1.75rem); line-height:1.12; margin:0 0 1rem; }
+.modal__box .etykieta{ color:rgba(234,235,231,.6); }
+.modal__box p{ font-size:1rem; line-height:1.6; }
+.modal__box .pole label{ color:rgba(234,235,231,.6); }
+.modal__btn{ width:100%; }
+
+.modal__zamknij{
+  position:absolute; top:.75rem; right:.9rem;
+  background:none; border:0; cursor:pointer;
+  color:rgba(234,235,231,.55);
+  font-family:var(--ff-display); font-size:20px; line-height:1; padding:.4rem;
+  transition:color .2s ease;
+}
+.modal__zamknij:hover{ color:var(--mgla); }
+
+.modal__nie{
+  display:block; margin:1.25rem auto 0;
+  background:none; border:0; cursor:pointer;
+  font-family:var(--ff-display); font-size:13px; letter-spacing:.04em;
+  color:rgba(234,235,231,.5);
+  transition:color .2s ease;
+}
+.modal__nie:hover{ color:var(--mgla); }
+
+/* =========================================================
+   Pasek zgody na cookies
+   ========================================================= */
+
+.cookies{
+  position:fixed; left:0; right:0; bottom:0; z-index:150;
+  background:var(--granit); color:rgba(234,235,231,.78);
+  border-top:1px solid rgba(178,149,102,.5);
+  box-shadow:0 -14px 40px rgba(21,24,26,.28);
+}
+.cookies[hidden]{ display:none; }
+.cookies__in{ padding-block:clamp(1.25rem,2.5vw,1.75rem); }
+.cookies .etykieta{ color:rgba(234,235,231,.55); margin-bottom:.7rem; padding-bottom:0; }
+.cookies .etykieta::before,
+.cookies .etykieta::after{ content:none; }
+.cookies p{ margin:0; max-width:62ch; font-size:1rem; line-height:1.55; }
+.cookies a{ color:var(--mgla); text-decoration:none; border-bottom:1px solid var(--khaki); }
+
+.cookies__gora{
+  display:flex; flex-wrap:wrap; gap:1.25rem 2.5rem;
+  align-items:flex-start; justify-content:space-between;
+}
+.cookies__gora > div:first-child{ flex:1 1 320px; min-width:0; }
+.cookies__akcje{ display:flex; flex-wrap:wrap; gap:.75rem 1rem; align-items:center; }
+.cookies__akcje .btn{ padding:.9em 1.5em; font-size:13px; }
+
+.cookies__link{
+  background:none; border:0; cursor:pointer;
+  font-family:var(--ff-display); font-size:13px; font-weight:600; letter-spacing:.04em;
+  color:var(--mgla); border-bottom:1px solid var(--khaki); padding:0 0 2px;
+  transition:border-color .2s ease;
+}
+.cookies__link:hover{ border-bottom-color:var(--mgla); }
+
+.btn--obrys{ background:transparent; border-color:rgba(234,235,231,.4); color:var(--mgla); }
+.btn--obrys:hover{ background:transparent; border-color:var(--mgla); }
+.btn--khaki{ background:transparent; border-color:var(--khaki); color:var(--mgla); }
+.btn--khaki:hover{ background:var(--khaki); color:var(--granit); }
+
+.cookies__panel{
+  margin-top:1.5rem; padding-top:1.25rem;
+  border-top:1px solid var(--linia-jasna);
+  display:flex; flex-wrap:wrap; gap:1rem 2.5rem;
+  align-items:flex-end; justify-content:space-between;
+}
+.cookies__panel[hidden]{ display:none; }
+.cookies__kategorie{ display:flex; flex-wrap:wrap; gap:.75rem 2.5rem; }
+.cookies__kategorie label,
+.cookies__stale{
+  display:flex; gap:.7rem; align-items:center;
+  font-size:.9375rem; cursor:pointer;
+}
+.cookies__stale{ color:rgba(234,235,231,.5); cursor:default; }
+.cookies__stale i{
+  width:18px; height:18px; flex:0 0 auto;
+  border:1px solid rgba(234,235,231,.3); background:rgba(234,235,231,.25);
+}
+.cookies__kategorie input{
+  appearance:none; -webkit-appearance:none;
+  width:18px; height:18px; flex:0 0 auto; cursor:pointer;
+  border:1px solid rgba(234,235,231,.45); background:transparent;
+}
+.cookies__kategorie input:checked{ background:var(--khaki); border-color:var(--khaki); }
+
+/* stopka — linki prawne obok siebie */
+.stopka__prawne{ display:flex; flex-wrap:wrap; gap:.5rem 1.25rem; }
+
+/* =========================================================
+   Dokumenty prawne (prywatnosc.html, cookies.html)
+   ========================================================= */
+
+.dok{ max-width:760px; margin-inline:auto; }
+.dok h1{ font-size:clamp(2rem,4.6vw,3.25rem); margin-bottom:1.5rem; }
+.dok h2{ font-size:var(--fs-h3); margin:3.25rem 0 1.25rem; padding-bottom:.7rem; border-bottom:1px solid var(--linia); }
+.dok h3{ font-size:1.0625rem; margin:2.25rem 0 .75rem; letter-spacing:-.01em; }
+.dok ul{ list-style:none; margin:0 0 1.15em; padding:0; }
+.dok ul li{ padding:.6rem 0 .6rem 1.75rem; border-top:1px solid var(--linia); position:relative; }
+.dok ul li:last-child{ border-bottom:1px solid var(--linia); }
+.dok ul li::before{ content:""; position:absolute; left:0; top:1.4em; width:12px; height:1px; background:var(--khaki); }
+.dok .toc{ background:var(--papier); padding:clamp(1.5rem,3vw,2rem); border-top:1px solid var(--linia); margin-top:2.5rem; }
+.dok .toc strong{
+  font-family:var(--ff-display); font-size:var(--fs-micro); font-weight:600;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--kamien);
+  display:block; margin-bottom:1.1rem;
+}
+.dok .toc ul li,
+.dok .toc ul li:last-child{ border:0; padding:.3rem 0 .3rem 1.75rem; }
+.dok .box{ padding-block:clamp(1.75rem,3.5vw,2.25rem); border-bottom:1px solid var(--linia); }
+.dok .box:first-of-type{ border-top:1px solid var(--linia); margin-top:2.5rem; }
+.dok .box h2{ margin:0 0 .85rem; padding:0; border:0; }
+.dok table{ border-collapse:collapse; width:100%; margin:1.5rem 0; }
+.dok th{
+  font-family:var(--ff-display); font-size:var(--fs-micro); font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--granit); background:var(--papier);
+}
+.dok th,.dok td{ border:1px solid var(--linia); padding:.7rem .9rem; text-align:left; font-size:15px; }
+.dok a{ color:var(--granit); text-decoration:none; border-bottom:1px solid var(--khaki); }
+.dok a:hover{ border-bottom-color:var(--granit); }
+.dok .intro p:first-child{ font-size:var(--fs-lead); line-height:1.55; }
+.dok .meta{
+  margin-top:clamp(3rem,6vw,4.5rem); padding-top:1.75rem;
+  border-top:1px solid var(--linia);
+  font-family:var(--ff-display); font-size:13px; color:var(--kamien);
+}
+.dok .meta p{ margin:0 0 .35rem; }
+.dok .btn{ margin-top:1.5rem; }

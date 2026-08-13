@@ -3,13 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Polityka prywatności</title>
-<meta name="robots" content="noindex">
+<title>Polityka prywatności — Krzysztof Bożek</title>
+<meta name="description" content="Polityka prywatności strony krzysztofbozek.pl — jakie dane zbieramy, w jakim celu i jakie prawa Ci przysługują.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .dok{ max-width:760px; margin-inline:auto }
+  .dok h1{ font-size:clamp(2rem,4.6vw,3.25rem); margin-bottom:1.5rem }
+  .dok h2{ font-size:var(--fs-h3); margin:3.25rem 0 1.25rem; padding-bottom:.7rem; border-bottom:1px solid var(--linia) }
+  .dok h3{ font-size:1.0625rem; margin:2.25rem 0 .75rem }
+  .dok ul{ list-style:none; margin:0 0 1.15em; padding:0 }
+  .dok ul li{ padding:.6rem 0 .6rem 1.75rem; border-top:1px solid var(--linia); position:relative }
+  .dok ul li:last-child{ border-bottom:1px solid var(--linia) }
+  .dok ul li::before{ content:""; position:absolute; left:0; top:1.4em; width:12px; height:1px; background:var(--khaki) }
+  .dok .toc{ background:var(--papier); padding:clamp(1.5rem,3vw,2rem); border-top:1px solid var(--linia); margin:2.5rem 0 0 }
+  .dok .toc strong{ font-family:var(--ff-display); font-size:var(--fs-micro); font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--kamien); display:block; margin-bottom:1.1rem }
+  .dok .toc ul li,.dok .toc ul li:last-child{ border:0; padding:.3rem 0 .3rem 1.75rem }
+  .dok .box{ padding-block:clamp(1.75rem,3.5vw,2.25rem); border-bottom:1px solid var(--linia) }
+  .dok .box:first-of-type{ border-top:1px solid var(--linia); margin-top:2.5rem }
+  .dok .box h2{ margin:0 0 .85rem; padding:0; border:0 }
+  .dok table{ border-collapse:collapse; width:100%; margin:1.5rem 0 }
+  .dok th{ font-family:var(--ff-display); font-size:var(--fs-micro); font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--granit); background:var(--papier) }
+  .dok th,.dok td{ border:1px solid var(--linia); padding:.7rem .9rem; text-align:left; font-size:15px }
+  .dok a{ color:var(--granit); text-decoration:none; border-bottom:1px solid var(--khaki) }
+  .dok a:hover{ border-bottom-color:var(--granit) }
+  .dok .meta{ margin-top:clamp(3rem,6vw,4.5rem); padding-top:1.75rem; border-top:1px solid var(--linia); font-family:var(--ff-display); font-size:13px; color:var(--kamien) }
+  .dok .meta p{ margin:0 0 .35rem }
+  .dok .intro p:first-child{ font-size:var(--fs-lead); line-height:1.55 }
+  .dok .btn{ margin:1.5rem 0 0 }
+</style>
 </head>
 <body>
 
@@ -17,9 +42,7 @@
 
 <header class="gora">
   <div class="kontener gora__in">
-    <a class="znak" href="index.html">
-      <span class="znak__imie">Krzysztof Bożek</span>
-    </a>
+    <a class="znak" href="index.html"><span class="znak__imie">Krzysztof Bożek</span></a>
     <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
     <nav class="menu" id="menu" aria-label="Główna">
       <a href="o-mnie.html">O mnie</a>
@@ -27,102 +50,233 @@
       <a href="blog.html">Blog</a>
       <a href="newsletter.html">Newsletter</a>
       <a href="index.html#kontakt">Kontakt</a>
-      <a class="btn" href="newsletter.html#zapis">Zapisz się</a>
+      <a class="btn" href="newsletter.html">Zapisz się</a>
     </nav>
   </div>
 </header>
 
-<main id="tresc">
-  <section class="sekcja">
-    <div class="kontener">
-      <div class="artykul">
-        <span class="etykieta">Dokument</span>
-        <h1>Polityka prywatności</h1>
-      </div>
+<main id="tresc" class="sekcja">
+  <div class="kontener">
+    <div class="dok">
+<h1>Polityka prywatności</h1>
 
-      <div class="artykul artykul__tresc" style="margin-top:2.5rem">
-        <!-- ================================================================
-             SZKIELET DO UZUPEŁNIENIA. To nie jest porada prawna — przed
-             publikacją warto dać ten tekst do sprawdzenia prawnikowi lub
-             skorzystać z gotowego wzoru dostosowanego do Twojej działalności.
-             Miejsca w nawiasach kwadratowych wymagają uzupełnienia.
-             ================================================================ -->
+<div class="intro">
+<p>Niniejszy dokument opisuje, w jaki sposób przetwarzamy dane osobowe osób korzystających ze strony internetowej krzysztofbozek.pl oraz naszego sklepu internetowego, a także w jaki sposób wykorzystujemy pliki cookies i podobne technologie.</p>
 
-        <h2>Administrator danych</h2>
-        <p>
-          Administratorem Twoich danych osobowych jest Krzysztof [Nazwisko],
-          prowadzący działalność pod adresem [adres], NIP [numer].
-          Kontakt: <a href="mailto:kontakt@przyklad.pl">kontakt@przyklad.pl</a>.
-        </p>
+<p>Znajdziesz tu informacje o tym, jakie dane zbieramy, w jakim celu i na jakiej podstawie prawnej je przetwarzamy, komu je udostępniamy oraz jakie prawa Ci przysługują. Jeśli po lekturze będziesz mieć pytania, napisz do nas na adres <a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a>.</p>
+</div>
 
-        <h2>Jakie dane zbieram</h2>
-        <p>
-          Przez formularz newslettera: adres e-mail oraz — jeśli je podasz — imię.
-          Przy kontakcie mailowym: dane, które sam/sama umieścisz w wiadomości.
-          Strona zbiera także podstawowe dane statystyczne o ruchu ([nazwa narzędzia
-          analitycznego albo informacja, że strona nie używa analityki]).
-        </p>
+<div class="toc">
+<strong>Spis treści</strong>
+<ul>
+<li><a href="#1">1. Administrator danych</a></li>
+<li><a href="#2">2. Kontakt w sprawach ochrony danych</a></li>
+<li><a href="#3">3. Cele i podstawy przetwarzania danych</a></li>
+<li><a href="#4">4. Jakie dane przetwarzamy</a></li>
+<li><a href="#5">5. Skąd pochodzą Twoje dane</a></li>
+<li><a href="#6">6. Okres przechowywania danych</a></li>
+<li><a href="#7">7. Komu udostępniamy dane</a></li>
+<li><a href="#8">8. Przekazywanie danych poza EOG</a></li>
+<li><a href="#9">9. Profilowanie i zautomatyzowane decyzje</a></li>
+<li><a href="#10">10. Twoje prawa</a></li>
+<li><a href="#11">11. Bezpieczeństwo danych</a></li>
+<li><a href="#12">12. Cookies i podobne technologie</a></li>
+<li><a href="#13">13. Zarządzanie zgodami na cookies</a></li>
+<li><a href="#14">14. Wykorzystywane narzędzia zewnętrzne</a></li>
+<li><a href="#15">15. Media społecznościowe</a></li>
+<li><a href="#16">16. Zmiany Polityki prywatności</a></li>
+</ul>
+</div>
 
-        <h2>Po co i na jakiej podstawie</h2>
-        <p>
-          Adres e-mail przetwarzam wyłącznie po to, żeby wysyłać Ci newsletter.
-          Podstawą jest Twoja zgoda (art. 6 ust. 1 lit. a RODO), wyrażona przez zaznaczenie
-          pola przy zapisie i potwierdzona kliknięciem w link aktywacyjny.
-        </p>
+<h2 id="1">1. Administrator danych</h2>
+<p>Administratorem danych osobowych przetwarzanych w związku z funkcjonowaniem strony krzysztofbozek.pl jest:</p>
+<p><strong>Bożek sp. z o.o.</strong><br>
+Plac gen. Józefa Hallera 5/14A<br>
+03-464 Warszawa<br>
+NIP: 701 079 75 29<br>
+KRS: 0000961795<br>
+REGON: 369294850</p>
+<p>W dalszej części dokumentu, posługując się słowami „my", „nas", „nasze", mamy na myśli powyższy podmiot.</p>
 
-        <h2>Kto ma dostęp do danych</h2>
-        <p>
-          Dane z formularza trafiają do systemu do wysyłki newslettera:
-          [nazwa dostawcy, np. MailerLite Limited, Irlandia] — działającego jako podmiot
-          przetwarzający na moje zlecenie. Nie sprzedaję ani nie udostępniam adresów nikomu innemu.
-        </p>
+<h2 id="2">2. Kontakt w sprawach ochrony danych</h2>
+<p>Nie powołaliśmy inspektora ochrony danych, ponieważ przepisy nas do tego nie zobowiązują. Wszelkie pytania, wnioski i uwagi dotyczące przetwarzania danych osobowych możesz kierować bezpośrednio na adres: <a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a>.</p>
 
-        <h2>Jak długo</h2>
-        <p>
-          Do momentu wypisania się z newslettera. Po wypisaniu adres usuwam z listy;
-          zachowuję jedynie informację o wycofaniu zgody, jeśli jest to potrzebne
-          do wykazania zgodności z przepisami.
-        </p>
+<h2 id="3">3. Cele i podstawy przetwarzania danych</h2>
+<p>Przetwarzamy Twoje dane w różnych celach związanych z prowadzeniem strony, sklepu internetowego oraz planowanej platformy z kontem użytkownika. Poniżej znajdziesz ich pełną listę wraz z podstawami prawnymi wynikającymi z RODO.</p>
 
-        <h2>Twoje prawa</h2>
-        <p>
-          Masz prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania,
-          przenoszenia danych oraz wycofania zgody w dowolnym momencie — wycofanie nie wpływa
-          na legalność wysyłek sprzed jego dokonania. Możesz też wnieść skargę do Prezesa
-          Urzędu Ochrony Danych Osobowych.
-        </p>
-        <p>
-          Najprostszy sposób na wypisanie się: link „wypisz się” na dole każdego listu.
-        </p>
+<table>
+<tr><th>Cel przetwarzania</th><th>Podstawa prawna</th></tr>
+<tr><td>Założenie i obsługa konta użytkownika na platformie</td><td>art. 6 ust. 1 lit. b RODO</td></tr>
+<tr><td>Realizacja zamówień w sklepie internetowym</td><td>art. 6 ust. 1 lit. b i f RODO</td></tr>
+<tr><td>Obsługa porzuconych koszyków / niedokończonych zamówień</td><td>art. 6 ust. 1 lit. b i f RODO</td></tr>
+<tr><td>Obsługa reklamacji i odstąpień od umowy</td><td>art. 6 ust. 1 lit. c i b RODO</td></tr>
+<tr><td>Wysyłka newslettera</td><td>art. 6 ust. 1 lit. a i f RODO</td></tr>
+<tr><td>Kontakt i obsługa korespondencji</td><td>art. 6 ust. 1 lit. f RODO</td></tr>
+<tr><td>Rozliczenia podatkowe i księgowe</td><td>art. 6 ust. 1 lit. c RODO</td></tr>
+<tr><td>Archiwizacja dokumentacji</td><td>art. 6 ust. 1 lit. f RODO</td></tr>
+<tr><td>Ustalenie, dochodzenie i obrona roszczeń</td><td>art. 6 ust. 1 lit. f RODO</td></tr>
+<tr><td>Tworzenie grup odbiorców reklam (Meta Pixel)</td><td>art. 6 ust. 1 lit. f RODO</td></tr>
+<tr><td>Prowadzenie profili w mediach społecznościowych</td><td>art. 6 ust. 1 lit. f RODO</td></tr>
+<tr><td>Analiza ruchu i statystyki (Google Analytics)</td><td>art. 6 ust. 1 lit. f RODO</td></tr>
+<tr><td>Marketing własnych produktów i usług</td><td>art. 6 ust. 1 lit. f RODO</td></tr>
+<tr><td>Realizacja obowiązków wynikających z RODO</td><td>art. 6 ust. 1 lit. c i f RODO</td></tr>
+</table>
 
-        <h2>Ciasteczka</h2>
-        <p>
-          [Uzupełnij: czy strona używa ciasteczek analitycznych lub marketingowych.
-          Jeżeli używa wyłącznie technicznych — napisz to wprost; jeżeli analitycznych —
-          potrzebny będzie baner zgody.]
-        </p>
+<h3>Konto użytkownika na platformie</h3>
+<p>Planujemy udostępnić platformę wymagającą rejestracji konta. Założenie konta będzie wymagać podania danych określonych w formularzu rejestracyjnym – będą one wykorzystywane do świadczenia usługi konta, w tym zapewnienia dostępu do wykupionych treści lub funkcji. System rejestracyjny automatycznie zapisuje numer IP użyty podczas zakładania konta. Po usunięciu konta dane trafiają do archiwum na wypadek ewentualnych roszczeń związanych ze świadczoną usługą.</p>
 
-        <h2>Tajemnica zawodowa</h2>
-        <p>
-          Dane osób korzystających z psychoterapii są objęte tajemnicą zawodową i nie mają
-          nic wspólnego z listą newslettera. Zapisanie się na newsletter nie oznacza
-          rozpoczęcia terapii ani nie tworzy relacji terapeutycznej.
-        </p>
+<h3>Zamówienia w sklepie internetowym</h3>
+<p>Składając zamówienie, podajesz dane niezbędne do jego realizacji, wskazane w formularzu zamówienia – ich podanie jest warunkiem koniecznym do sfinalizowania zakupu. Zapisujemy również numer IP użyty podczas zakupów oraz szczegóły zamówienia: datę i godzinę złożenia, numer identyfikacyjny, przedmiot zamówienia, cenę, sposób i termin płatności. Dane te przetwarzamy w celu zawarcia i wykonania umowy, a po jej realizacji – w celach archiwalnych, rozliczeniowych i na wypadek roszczeń.</p>
 
-        <p style="margin-top:2.5rem"><a class="link" href="index.html">Wróć na stronę główną</a></p>
-      </div>
+<h3>Niedokończone zamówienia</h3>
+<p>Jeżeli rozpoczniesz zakupy, ale ich nie sfinalizujesz, możemy podjąć próbę kontaktu w celu pomocy w dokończeniu transakcji. W tym celu przetwarzamy dane podane na wcześniejszym etapie zakupów (np. imię, adres e-mail) oraz informacje o zawartości koszyka.</p>
+
+<h3>Reklamacje i odstąpienie od umowy</h3>
+<p>Jeśli złożysz reklamację lub odstąpisz od umowy, przetwarzamy dane zawarte w treści Twojego zgłoszenia w celu jego rozpatrzenia. Po zakończeniu sprawy dane trafiają do archiwum oraz dokumentacji księgowej, zgodnie z obowiązującymi przepisami.</p>
+
+<h3>Newsletter</h3>
+<p>Zapis do newslettera wymaga podania danych określonych w formularzu zapisu (co do zasady adresu e-mail). Nasz system mailingowy zapisuje numer IP użyty podczas zapisu, przybliżoną lokalizację oraz rodzaj przeglądarki, a także śledzi, które wiadomości otworzyłeś i w jakie linki kliknąłeś – dzięki temu możemy lepiej dopasować treść wysyłanych informacji. Podstawą przetwarzania jest Twoja zgoda oraz nasz uzasadniony interes w postaci prowadzenia działań marketingowych. Możesz zrezygnować z subskrypcji w dowolnym momencie, klikając link w stopce wiadomości lub kontaktując się z nami – dane po rezygnacji trafiają do archiwum na potrzeby wykazania, że działaliśmy zgodnie z prawem.</p>
+
+<h3>Kontakt i korespondencja</h3>
+<p>Pisząc do nas e-mailem, przez formularz kontaktowy lub inny kanał komunikacji, przekazujesz dane zawarte w treści wiadomości. Przetwarzamy je wyłącznie w celu prowadzenia z Tobą korespondencji.</p>
+
+<h3>Obowiązki podatkowe i księgowe</h3>
+<p>Prowadząc sprzedaż, jesteśmy zobowiązani do wystawiania faktur i prowadzenia dokumentacji księgowej. Wymaga to przetwarzania danych takich jak imię i nazwisko, nazwa firmy, adres oraz NIP.</p>
+
+<h3>Archiwizacja oraz roszczenia</h3>
+<p>Dla bezpieczeństwa i porządku wewnętrznego przechowujemy dokumentację związaną z naszymi relacjami z klientami. Jesteśmy też uprawnieni do zachowania danych na wypadek konieczności ustalenia, dochodzenia lub obrony roszczeń.</p>
+
+<h3>Meta Pixel i grupy odbiorców reklam</h3>
+<p>Twój adres e-mail znajdujący się w naszej bazie może zostać wykorzystany do stworzenia niestandardowych grup odbiorców w systemie reklamowym Meta (Facebook, Instagram). Adres e-mail jest przed wysłaniem szyfrowany (hashowany) i służy wyłącznie dopasowaniu użytkownika do jego konta społecznościowego – system Meta nie udostępnia go osobom trzecim. Dodatkowo na stronie działa Meta Pixel, który zbiera informacje o Twojej aktywności i pozwala nam kierować i mierzyć skuteczność reklam.</p>
+
+<h3>Analiza i statystyka</h3>
+<p>Korzystamy z Google Analytics, aby rozumieć, jak odwiedzający korzystają ze strony, i na tej podstawie ją ulepszać. W ramach tego narzędzia mamy dostęp wyłącznie do danych zbiorczych, których nie da się przypisać do konkretnej osoby.</p>
+
+<h3>Realizacja obowiązków związanych z ochroną danych</h3>
+<p>Jako administrator jesteśmy zobowiązani do przestrzegania RODO, co obejmuje m.in. obsługę Twoich wniosków dotyczących własnych danych (np. o dostęp do nich lub ich usunięcie).</p>
+
+<h2 id="4">4. Jakie dane przetwarzamy</h2>
+<p>W zależności od tego, z jakich funkcji strony korzystasz, możemy przetwarzać następujące kategorie danych:</p>
+<ul>
+<li>imię i nazwisko,</li>
+<li>adres e-mail,</li>
+<li>numer telefonu,</li>
+<li>adres IP,</li>
+<li>adres dostawy / adres do faktury,</li>
+<li>dane firmowe (nazwa, NIP) – przy zakupach na fakturę,</li>
+<li>numer rachunku bankowego – przy zwrotach płatności,</li>
+<li>dane konta użytkownika platformy,</li>
+<li>historia zamówień,</li>
+<li>treść korespondencji,</li>
+<li>dane zbierane przez pliki cookies i podobne technologie (dane zanonimizowane / statystyczne).</li>
+</ul>
+
+<h2 id="5">5. Skąd pochodzą Twoje dane</h2>
+<p>Najczęściej przekazujesz nam je samodzielnie – zakładając konto, składając zamówienie, zapisując się do newslettera, kontaktując się z nami lub korzystając z funkcji dostępnych na stronie czy w naszych profilach społecznościowych. Część danych jest zbierana automatycznie przez wykorzystywane przez nas narzędzia (opisane w punkcie 14).</p>
+
+<h2 id="6">6. Okres przechowywania danych</h2>
+<ul>
+<li><strong>Konto użytkownika:</strong> do czasu jego usunięcia.</li>
+<li><strong>Zamówienia:</strong> do czasu wykonania umowy, a następnie w archiwum i dokumentacji księgowej przez okres wymagany przepisami.</li>
+<li><strong>Niedokończone zamówienia:</strong> do 6 miesięcy od rozpoczęcia transakcji.</li>
+<li><strong>Reklamacje i odstąpienia:</strong> do zakończenia sprawy, a następnie w archiwum.</li>
+<li><strong>Newsletter:</strong> do rezygnacji z subskrypcji.</li>
+<li><strong>Obowiązki podatkowo-księgowe:</strong> zgodnie z okresami wskazanymi w przepisach prawa.</li>
+<li><strong>Roszczenia:</strong> do czasu ich przedawnienia.</li>
+<li><strong>Grupy odbiorców reklam (Pixel):</strong> do utraty przydatności danych lub wniesienia sprzeciwu.</li>
+<li><strong>Analiza i statystyka, marketing własny:</strong> do utraty przydatności danych lub wniesienia sprzeciwu.</li>
+<li><strong>Media społecznościowe:</strong> przez czas dostępności danych w danym serwisie.</li>
+</ul>
+
+<h2 id="7">7. Komu udostępniamy dane</h2>
+<p>Do prowadzenia sklepu i platformy korzystamy z usług podmiotów zewnętrznych, którym możemy powierzać przetwarzanie danych, m.in.:</p>
+<ul>
+<li>firma hostingowa – w zakresie przechowywania danych na serwerze,</li>
+<li>dostawca platformy sklepowej / systemu obsługi zamówień,</li>
+<li>operator płatności internetowych,</li>
+<li>dostawca systemu do wysyłki newslettera,</li>
+<li>dostawca systemu fakturowania,</li>
+<li>biuro rachunkowe,</li>
+<li>dostawcy narzędzi analitycznych i marketingowych (Google, Meta),</li>
+<li>firmy świadczące obsługę techniczną i informatyczną strony.</li>
+</ul>
+<p>W razie potrzeby dane mogą zostać udostępnione radcy prawnemu lub adwokatowi, a także urzędom skarbowym oraz innym instytucjom uprawnionym do ich uzyskania na podstawie przepisów prawa (np. sądom, organom ścigania).</p>
+
+<h2 id="8">8. Przekazywanie danych poza EOG</h2>
+<p>W związku z korzystaniem z narzędzi takich jak Google Analytics czy Meta Pixel, część danych może być przekazywana do państw trzecich, w szczególności do USA. Dostawcy tych usług zapewniają odpowiedni poziom ochrony danych poprzez mechanizmy zgodności przewidziane przepisami RODO, w tym standardowe klauzule umowne.</p>
+
+<h2 id="9">9. Profilowanie i zautomatyzowane decyzje</h2>
+<p>Nie podejmujemy decyzji opierających się wyłącznie na zautomatyzowanym przetwarzaniu (w tym profilowaniu), które wywoływałyby wobec Ciebie skutki prawne lub w podobny sposób istotnie na Ciebie wpływały. Korzystamy natomiast z narzędzi, które na podstawie Twojej aktywności na stronie mogą wyświetlać Ci spersonalizowane reklamy (tzw. reklama behawioralna). Więcej informacji na ten temat oraz możliwość zarządzania ustawieniami znajdziesz na stronie <a href="https://www.youronlinechoices.com/pl/" target="_blank" rel="noopener">youronlinechoices.com</a>.</p>
+
+<h2 id="10">10. Twoje prawa</h2>
+<p>Zgodnie z RODO przysługują Ci następujące prawa:</p>
+<ul>
+<li>dostępu do swoich danych i otrzymania ich kopii,</li>
+<li>sprostowania (poprawienia) danych,</li>
+<li>usunięcia danych,</li>
+<li>ograniczenia przetwarzania,</li>
+<li>wniesienia sprzeciwu wobec przetwarzania opartego na naszym uzasadnionym interesie,</li>
+<li>przenoszenia danych,</li>
+<li>cofnięcia zgody w dowolnym momencie, bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej cofnięciem,</li>
+<li>wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</li>
+</ul>
+<p>Powyższe prawa nie mają charakteru bezwzględnego i mogą nie przysługiwać w odniesieniu do niektórych czynności przetwarzania – zasady te opisują art. 16–21 RODO. Aby skorzystać z któregoś z powyższych praw, napisz do nas na <a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a>.</p>
+
+<h2 id="11">11. Bezpieczeństwo danych</h2>
+<p>Stosujemy techniczne i organizacyjne środki bezpieczeństwa odpowiednie do ryzyka związanego z poszczególnymi procesami przetwarzania danych – w tym zabezpieczenia infrastruktury technicznej i procedury ograniczające dostęp do danych osobom nieupoważnionym. Monitorujemy te rozwiązania i wprowadzamy niezbędne usprawnienia.</p>
+
+<h2 id="12">12. Cookies i podobne technologie</h2>
+<p>Strona korzysta z plików cookies oraz podobnych technologii (np. pikseli śledzących), które umożliwiają m.in. prawidłowe działanie koszyka zakupowego i logowania do konta, a także analizę ruchu i wyświetlanie dopasowanych treści reklamowych.</p>
+<p>Rozróżniamy dwa rodzaje plików cookies:</p>
+<ul>
+<li><strong>Niezbędne</strong> – konieczne do prawidłowego funkcjonowania strony, sklepu i logowania; są aktywne zawsze.</li>
+<li><strong>Pozostałe</strong> (analityczne, marketingowe) – uruchamiane wyłącznie po uzyskaniu Twojej zgody.</li>
+</ul>
+
+<h2 id="13">13. Zarządzanie zgodami na cookies</h2>
+<p>Przy pierwszej wizycie na stronie wyświetlimy Ci komunikat z prośbą o zgodę na wykorzystanie plików cookies innych niż niezbędne, wraz z możliwością zarządzania poszczególnymi kategoriami. Zgodę możesz w każdej chwili zmienić z poziomu ustawień cookies dostępnych w stopce strony, a także poprzez ustawienia swojej przeglądarki internetowej lub trybu incognito. Pamiętaj, że zablokowanie niektórych plików cookies może ograniczyć dostępność części funkcji strony (np. wyświetlanie treści osadzonych z serwisów zewnętrznych).</p>
+
+<h2 id="14">14. Wykorzystywane narzędzia zewnętrzne</h2>
+
+<h3>Google Analytics</h3>
+<p>Narzędzie dostarczane przez Google LLC, wykorzystywane do analizy ruchu na stronie i tworzenia statystyk. Gromadzi dane w formie zanonimizowanej, niepozwalającej na identyfikację konkretnej osoby. Możesz zablokować działanie Google Analytics, instalując dodatek do przeglądarki: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>. Więcej informacji: <a href="https://policies.google.com/privacy?hl=pl" target="_blank" rel="noopener">polityka prywatności Google</a>.</p>
+
+<h3>Meta Pixel</h3>
+<p>Narzędzie dostarczane przez Meta Platforms Inc., wykorzystywane do wyświetlania spersonalizowanych reklam w serwisach Facebook i Instagram na podstawie Twojej aktywności na naszej stronie, a także do pomiaru skuteczności kampanii reklamowych. Więcej informacji: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">polityka prywatności Meta</a>. Ustawieniami reklam możesz zarządzać bezpośrednio z poziomu swojego konta na Facebooku.</p>
+
+<h3>System do obsługi newslettera</h3>
+<p>Korzystamy z zewnętrznego systemu mailingowego do wysyłki newslettera. Narzędzie to przetwarza adresy e-mail subskrybentów oraz dane o aktywności w wiadomościach (otwarcia, kliknięcia) w celu realizacji wysyłki i optymalizacji naszych działań marketingowych.</p>
+
+<h3>Platforma sklepowa i operator płatności</h3>
+<p>Do obsługi zamówień korzystamy z platformy e-commerce oraz zewnętrznego operatora płatności internetowych, którzy przetwarzają dane niezbędne do realizacji i rozliczenia zamówienia.</p>
+
+<h2 id="15">15. Media społecznościowe</h2>
+<p>Prowadzimy lub planujemy prowadzić profile w mediach społecznościowych (m.in. Facebook, Instagram, LinkedIn). Jeśli obserwujesz nasz profil, reagujesz na publikowane treści lub piszesz do nas wiadomość prywatną, przetwarzamy dane widoczne w ramach danego serwisu w celu budowania społeczności, udzielenia odpowiedzi lub zaproponowania współpracy. W zakresie tych profili jesteśmy współadministratorem danych wraz z dostawcą danego serwisu społecznościowego. Zasady przetwarzania danych przez poszczególnych dostawców znajdziesz w ich politykach prywatności:</p>
+<ul>
+<li>Facebook: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">facebook.com/privacy/policy</a></li>
+<li>Instagram: <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener">privacycenter.instagram.com/policy</a></li>
+<li>LinkedIn: <a href="https://pl.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">linkedin.com/legal/privacy-policy</a></li>
+</ul>
+
+<h2 id="16">16. Zmiany Polityki prywatności</h2>
+<p>Może się zdarzyć, że będziemy zmieniać treść tej Polityki prywatności – w szczególności w związku z rozwojem strony, uruchomieniem nowych funkcji (np. platformy z kontem użytkownika) czy zmianami przepisów prawa. Jeśli posiadasz konto użytkownika lub jesteś subskrybentem newslettera, o istotnych zmianach poinformujemy Cię odrębną wiadomością. Zachęcamy do zaglądania tutaj od czasu do czasu.</p>
+
+<div class="meta">
+<p>Data ostatniej aktualizacji: 11.08.2026</p>
+<p>&copy; Bożek sp. z o.o.</p>
+</div>
     </div>
-  </section>
-
-  <footer class="stopka">
-    <div class="kontener">
-      <div class="stopka__dol" style="margin-top:0; border-top:0; padding-top:0">
-        <span>© <span id="rok">2026</span> Krzysztof [Nazwisko] · Psychoterapeuta Gestalt</span>
-        <span><a href="index.html">Strona główna</a> · Członek PTPG</span>
-      </div>
-    </div>
-  </footer>
+  </div>
 </main>
+
+<footer class="stopka">
+  <div class="kontener">
+    <div class="stopka__dol" style="margin-top:0; border-top:0; padding-top:0">
+      <span>© <span id="rok">2026</span> Krzysztof Bożek · Psychoterapeuta Gestalt</span>
+      <span><a href="prywatnosc.html">Polityka prywatności</a> · <a href="cookies.html">Polityka cookies</a> · <a href="index.html">Strona główna</a></span>
+    </div>
+  </div>
+</footer>
 
 <script src="script.js"></script>
 <script>document.getElementById("rok").textContent = new Date().getFullYear();</script>

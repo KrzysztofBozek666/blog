@@ -52,9 +52,18 @@
           jak budować dobre relacje, przechodzić przez kryzysy i odzyskiwać kontakt ze sobą.
           Raz w tygodniu wysyłam list.
         </p>
-        <div class="hero__akcje">
-          <a class="btn" href="#zapis">Zapisz się do newslettera</a>
-          <a class="link" href="o-mnie.html">Poznaj mnie bliżej</a>
+        <div class="hero__zapis">
+          <span class="etykieta">Jeden list w piątek rano</span>
+          <form class="szybki" data-newsletter novalidate>
+            <input type="email" name="email" autocomplete="email" required placeholder="twoj@adres.pl" aria-label="Adres e-mail">
+            <button class="btn" type="submit">Zapisz się</button>
+          </form>
+          <p class="drobne drobne--jasne">
+            Zapisując się, zgadzasz się na otrzymywanie newslettera. Wypisujesz się jednym kliknięciem, w każdej chwili.
+            <a href="prywatnosc.html">Polityka prywatności</a>.
+          </p>
+          <p class="komunikat komunikat--jasny" role="status" aria-live="polite"></p>
+          <p style="margin:1.5rem 0 0"><a class="link" href="o-mnie.html">Poznaj mnie bliżej</a></p>
         </div>
       </div>
 
@@ -100,22 +109,12 @@
     </div>
   </section>
 
-  <!-- ================= PYTANIE (element sygnaturowy) ================= -->
-  <section class="pytanie">
-    <div class="kontener">
-      <div class="pytanie__in zjawia">
-        <span class="etykieta">Pytanie na dziś</span>
-        <p>Co daje Ci energię?</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= JAK PRACUJĘ ================= -->
-  <section class="sekcja" id="praca">
+  <section class="sekcja sekcja--kreska" id="praca">
     <div class="kontener">
       <div class="naglowek-sekcji">
         <span class="etykieta">Czym się zajmuję</span>
-        <h2>Trzy miejsca, w których możemy się spotkać.</h2>
+        <h2>Trzy drogi do wspólnej pracy.</h2>
       </div>
 
       <div class="oferta">
@@ -129,7 +128,6 @@
               Pierwsze spotkania są po to, żeby się poznać i sprawdzić, czy chcesz pracować
               właśnie ze mną — to Twoja decyzja, nie mój egzamin.
             </p>
-            <a class="link" href="#kontakt">Umów pierwsze spotkanie</a>
           </div>
         </article>
 
@@ -142,7 +140,7 @@
               Pracujemy w małej grupie, w konkretnym miejscu i czasie. Terminy ogłaszam
               najpierw w newsletterze — zwykle wtedy zostaje jeszcze kilka miejsc.
             </p>
-            <a class="link" href="#zapis">Dowiedz się o najbliższym terminie</a>
+            <a class="link" href="#kontakt">Dowiedz się o najbliższym terminie</a>
           </div>
         </article>
 
@@ -168,7 +166,7 @@
     <div class="kontener newsletter__grid">
       <div>
         <span class="etykieta">List co tydzień</span>
-        <h2>Jeden e-mail w czwartek rano.</h2>
+        <h2>Jeden e-mail w piątek rano.</h2>
         <p class="lead" style="margin-top:1.5rem; max-width:44ch">
           Newsletter jest moim głównym miejscem kontaktu z Tobą. Piszę w nim swobodniej
           niż na blogu i dokładam rzeczy, które akurat mnie zajmują.
@@ -216,7 +214,7 @@
     <div class="kontener">
       <div class="naglowek-sekcji">
         <span class="etykieta">Blog</span>
-        <h2>Nowy tekst w każdy czwartek.</h2>
+        <h2>Nowy tekst w każdy piątek.</h2>
       </div>
 
       <!-- PRZYKŁADOWE WPISY — do podmiany na prawdziwe teksty -->
@@ -266,32 +264,83 @@
           <p class="stopka__tytul">Kontakt</p>
           <ul>
             <!-- do podmiany na prawdziwe dane -->
-            <li><a href="mailto:kontakt@przyklad.pl">kontakt@przyklad.pl</a></li>
-            <li><a href="tel:+48000000000">+48 000 000 000</a></li>
+            <li><a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a></li>
             <li><a href="#">Instagram</a></li>
           </ul>
         </div>
 
         <div>
-          <p class="stopka__tytul">Gabinety</p>
+          <p class="stopka__tytul">Pracuję w:</p>
           <ul>
             <li>Centrum Psychoterapii i Edukacji PRAXE<br>Czechowice-Dziedzice</li>
-            <li>Bielskie Centrum Psychiatrii<br>Olszówka, Bielsko-Biała</li>
+            <li>Bielskie Centrum Psychiatrii<br>OLSZÓWKA, Bielsko-Biała</li>
           </ul>
         </div>
       </div>
 
       <div class="stopka__dol">
-        <span>© <span id="rok">2026</span> Krzysztof [Nazwisko] · Psychoterapeuta Gestalt</span>
-        <span>
-          <a href="prywatnosc.html">Polityka prywatności</a> ·
-          Członek Polskiego Towarzystwa Psychoterapii Gestalt
+        <span>© <span id="rok">2026</span> Krzysztof Bożek</span>
+        <span class="stopka__prawne">
+          <a href="prywatnosc.html">Polityka prywatności</a>
+          <a href="cookies.html">Polityka cookies</a>
         </span>
       </div>
     </div>
   </footer>
 
 </main>
+
+<!-- ================= POP-UP NEWSLETTERA ================= -->
+<div class="modal" id="popup-newsletter" hidden>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="popup-tytul">
+    <button class="modal__zamknij" type="button" data-popup-zamknij aria-label="Zamknij">&times;</button>
+    <span class="etykieta">List co tydzień</span>
+    <h2 id="popup-tytul">Zostaw adres — w piątek dostaniesz pierwszy list.</h2>
+    <p>Krótki tekst o relacjach i kryzysach, jedno ćwiczenie na tydzień i terminy warsztatów, zanim ogłoszę je gdziekolwiek indziej.</p>
+    <form class="formularz" data-newsletter data-popup-form novalidate>
+      <div class="pole">
+        <label for="email-popup">Adres e-mail</label>
+        <input type="email" id="email-popup" name="email" autocomplete="email" required placeholder="twoj@adres.pl">
+      </div>
+      <label class="zgoda" for="zgoda-popup">
+        <input type="checkbox" id="zgoda-popup" required>
+        <span>Zgadzam się na przetwarzanie mojego adresu e-mail w celu wysyłki newslettera. <a href="prywatnosc.html">Polityka prywatności</a>.</span>
+      </label>
+      <button class="btn btn--jasny modal__btn" type="submit">Zapisz mnie</button>
+      <p class="komunikat" role="status" aria-live="polite"></p>
+    </form>
+    <button class="modal__nie" type="button" data-popup-zamknij>Nie teraz</button>
+  </div>
+</div>
+
+<!-- ================= ZGODA NA COOKIES ================= -->
+<div class="cookies" id="cookies" hidden>
+  <div class="kontener cookies__in">
+    <div class="cookies__gora">
+      <div>
+        <span class="etykieta">Pliki cookies</span>
+        <p>
+          Niezbędne pliki cookies są zawsze aktywne. Na analitykę, marketing i obsługę newslettera potrzebuję Twojej zgody.
+          Szczegóły w <a href="cookies.html">Polityce cookies</a>.
+        </p>
+      </div>
+      <div class="cookies__akcje">
+        <button class="cookies__link" type="button" data-cookies-ustawienia>Ustawienia</button>
+        <button class="btn btn--obrys" type="button" data-cookies="niezbedne">Tylko niezbędne</button>
+        <button class="btn btn--jasny" type="button" data-cookies="wszystkie">Akceptuję wszystkie</button>
+      </div>
+    </div>
+    <div class="cookies__panel" hidden>
+      <div class="cookies__kategorie">
+        <span class="cookies__stale"><i></i>Niezbędne (zawsze aktywne)</span>
+        <label><input type="checkbox" name="analityka" checked>Analityka (Google Analytics)</label>
+        <label><input type="checkbox" name="marketing" checked>Marketing (Meta Pixel)</label>
+        <label><input type="checkbox" name="mailing" checked>Newsletter i formularze</label>
+      </div>
+      <button class="btn btn--khaki" type="button" data-cookies="wybor">Zapisz wybór</button>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 <script>document.getElementById("rok").textContent = new Date().getFullYear();</script>
