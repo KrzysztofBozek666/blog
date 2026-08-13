@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="pomin" href="#tresc">Przejdź do treści</a>
+
+<header class="gora">
+  <div class="kontener gora__in">
+    <a class="znak" href="index.html">
+      <span class="znak__imie">Krzysztof Bożek</span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Główna">
+      <a href="o-mnie.html">O mnie</a>
+      <a href="index.html#praca">Jak pracuję</a>
+      <a href="blog.html">Blog</a>
+      <a href="newsletter.html">Newsletter</a>
+      <a href="index.html#kontakt">Kontakt</a>
+      <a class="btn" href="newsletter.html#zapis">Zapisz się</a>
+    </nav>
+  </div>
+</header>
+
+<main id="tresc">
+  <section class="sekcja">
+    <div class="kontener">
+      <div class="artykul">
+        <span class="etykieta">Dokument</span>
+        <h1>Polityka prywatności</h1>
+      </div>
+
+      <div class="artykul artykul__tresc" style="margin-top:2.5rem">
+        <!-- ================================================================
+             SZKIELET DO UZUPEŁNIENIA. To nie jest porada prawna — przed
+             publikacją warto dać ten tekst do sprawdzenia prawnikowi lub
+             skorzystać z gotowego wzoru dostosowanego do Twojej działalności.
+             Miejsca w nawiasach kwadratowych wymagają uzupełnienia.
+             ================================================================ -->
+
+        <h2>Administrator danych</h2>
+        <p>
+          Administratorem Twoich danych osobowych jest Krzysztof [Nazwisko],
+          prowadzący działalność pod adresem [adres], NIP [numer].
+          Kontakt: <a href="mailto:kontakt@przyklad.pl">kontakt@przyklad.pl</a>.
+        </p>
+
+        <h2>Jakie dane zbieram</h2>
+        <p>
+          Przez formularz newslettera: adres e-mail oraz — jeśli je podasz — imię.
+          Przy kontakcie mailowym: dane, które sam/sama umieścisz w wiadomości.
+          Strona zbiera także podstawowe dane statystyczne o ruchu ([nazwa narzędzia
+          analitycznego albo informacja, że strona nie używa analityki]).
+        </p>
+
+        <h2>Po co i na jakiej podstawie</h2>
+        <p>
+          Adres e-mail przetwarzam wyłącznie po to, żeby wysyłać Ci newsletter.
+          Podstawą jest Twoja zgoda (art. 6 ust. 1 lit. a RODO), wyrażona przez zaznaczenie
+          pola przy zapisie i potwierdzona kliknięciem w link aktywacyjny.
+        </p>
+
+        <h2>Kto ma dostęp do danych</h2>
+        <p>
+          Dane z formularza trafiają do systemu do wysyłki newslettera:
+          [nazwa dostawcy, np. MailerLite Limited, Irlandia] — działającego jako podmiot
+          przetwarzający na moje zlecenie. Nie sprzedaję ani nie udostępniam adresów nikomu innemu.
+        </p>
+
+        <h2>Jak długo</h2>
+        <p>
+          Do momentu wypisania się z newslettera. Po wypisaniu adres usuwam z listy;
+          zachowuję jedynie informację o wycofaniu zgody, jeśli jest to potrzebne
+          do wykazania zgodności z przepisami.
+        </p>
+
+        <h2>Twoje prawa</h2>
+        <p>
+          Masz prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania,
+          przenoszenia danych oraz wycofania zgody w dowolnym momencie — wycofanie nie wpływa
+          na legalność wysyłek sprzed jego dokonania. Możesz też wnieść skargę do Prezesa
+          Urzędu Ochrony Danych Osobowych.
+        </p>
+        <p>
+          Najprostszy sposób na wypisanie się: link „wypisz się” na dole każdego listu.
+        </p>
+
+        <h2>Ciasteczka</h2>
+        <p>
+          [Uzupełnij: czy strona używa ciasteczek analitycznych lub marketingowych.
+          Jeżeli używa wyłącznie technicznych — napisz to wprost; jeżeli analitycznych —
+          potrzebny będzie baner zgody.]
+        </p>
+
+        <h2>Tajemnica zawodowa</h2>
+        <p>
+          Dane osób korzystających z psychoterapii są objęte tajemnicą zawodową i nie mają
+          nic wspólnego z listą newslettera. Zapisanie się na newsletter nie oznacza
+          rozpoczęcia terapii ani nie tworzy relacji terapeutycznej.
+        </p>
+
+        <p style="margin-top:2.5rem"><a class="link" href="index.html">Wróć na stronę główną</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="stopka">
+    <div class="kontener">
+      <div class="stopka__dol" style="margin-top:0; border-top:0; padding-top:0">
+        <span>© <span id="rok">2026</span> Krzysztof [Nazwisko] · Psychoterapeuta Gestalt</span>
+        <span><a href="index.html">Strona główna</a> · Członek PTPG</span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+<script>document.getElementById("rok").textContent = new Date().getFullYear();</script>
+</body>
+</html>
