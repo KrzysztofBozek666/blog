@@ -708,3 +708,30 @@ a{ color:inherit; }
 .stopka__zastrzezenia--kol{ margin:0; padding:0; border:0; }
 .stopka__zastrzezenia p{ margin:0; }
 .stopka .stopka__dol{ margin-top:2rem; }
+
+
+/* zgoda na jasnym tle (hero) + znak ✓ zamiast wypełnienia */
+.zgoda--jasna{ color:var(--kamien); font-size:.875rem; line-height:1.55; max-width:52ch; margin-top:1.25rem; }
+.zgoda--jasna a{ color:var(--granit); text-decoration:none; border-bottom:1px solid var(--khaki); }
+.zgoda input[type="checkbox"]{
+  appearance:none; -webkit-appearance:none;
+  width:20px; height:20px; flex:0 0 auto; cursor:pointer;
+  border:1px solid rgba(234,235,231,.45); background:transparent;
+  display:grid; place-content:center;
+  font-family:var(--ff-display); font-size:14px; font-weight:700; line-height:1; color:transparent;
+}
+.zgoda--jasna input[type="checkbox"]{ border-color:rgba(21,24,26,.35); }
+.zgoda input[type="checkbox"]::before{ content:"✓"; }
+.zgoda input[type="checkbox"]:checked{ border-color:var(--khaki); color:var(--khaki); }
+
+
+/* hero: pola w rzędzie, zgoda pod nimi — wszystko wewnątrz <form> */
+.szybki{ display:flex; flex-direction:column; gap:1.25rem; align-items:flex-start; max-width:560px; }
+.szybki__pola{ display:flex; flex-wrap:wrap; gap:.75rem 1rem; align-items:stretch; width:100%; }
+.szybki .zgoda--jasna{ margin-top:0; display:flex; gap:.85rem; align-items:flex-start; }
+
+
+/* anchory: nagłówek sekcji nie chowa się pod przyklejonym paskiem */
+html{ scroll-behavior:smooth; }
+section[id], .stopka[id], .sekcja[id], .newsletter[id]{ scroll-margin-top:88px; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }

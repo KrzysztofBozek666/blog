@@ -37,8 +37,8 @@
     <nav class="menu" id="menu" aria-label="Główna">
       <a href="o-mnie.html">O mnie</a>
       <a href="#praca">Jak pracuję</a>
+      <a href="#zapis">Newsletter</a>
       <a href="blog.html">Blog</a>
-      <a href="newsletter.html">Newsletter</a>
       <a href="#kontakt">Kontakt</a>
       <a class="btn" href="#zapis">Zapisz się</a>
     </nav>
@@ -64,13 +64,15 @@
         <div class="hero__zapis">
           <span class="etykieta">Jeden list w piątek rano</span>
           <form class="szybki" data-newsletter novalidate>
-            <input type="email" name="email" autocomplete="email" required placeholder="twoj@adres.pl" aria-label="Adres e-mail">
-            <button class="btn" type="submit">Zapisz się</button>
+            <div class="szybki__pola">
+              <input type="email" name="email" autocomplete="email" required placeholder="twoj@adres.pl" aria-label="Adres e-mail">
+              <button class="btn" type="submit">Zapisz się</button>
+            </div>
+            <label class="zgoda zgoda--jasna" for="zgoda-hero">
+              <input type="checkbox" id="zgoda-hero" required>
+              <span>Chcę dostawać newsletter i akceptuję <a href="prywatnosc.html">Politykę prywatności</a>. Wypisuję się jednym kliknięciem, w każdej chwili.</span>
+            </label>
           </form>
-          <p class="drobne drobne--jasne">
-            Zapisując się, zgadzasz się na otrzymywanie newslettera. Wypisujesz się jednym kliknięciem, w każdej chwili.
-            <a href="prywatnosc.html">Polityka prywatności</a>.
-          </p>
           <p class="komunikat komunikat--jasny" role="status" aria-live="polite"></p>
           <p style="margin:1.5rem 0 0"><a class="link" href="o-mnie.html">Poznaj mnie bliżej</a></p>
         </div>
@@ -89,9 +91,6 @@
       <div>
         <span class="etykieta">O mnie</span>
         <h2>Często żartuję, że miałem kilka żyć.</h2>
-        <img src="img/krzysztof-omnie.jpg" width="1000" height="1250"
-             alt="Krzysztof w czapce, portret przy drewnianej ścianie" loading="lazy"
-             style="margin-top:clamp(2rem,3vw,2.75rem)">
       </div>
       <div class="zjawia">
         <p class="lead">
@@ -143,7 +142,7 @@
         <article class="oferta__poz zjawia">
           <h3>Warsztaty rozwojowe</h3>
           <div class="oferta__tresc">
-            <span class="oferta__meta">Grupy · Beskidy i online</span>
+            <span class="oferta__meta">Zajęcia i wyjazdy grupowe</span>
             <p>
               Kilka razy w roku organizuję warsztaty o relacjach, kryzysie i kontakcie ze sobą.
               Pracujemy w małej grupie, w konkretnym miejscu i czasie. Terminy ogłaszam
@@ -156,7 +155,7 @@
         <article class="oferta__poz zjawia">
           <h3>Teksty i newsletter</h3>
           <div class="oferta__tresc">
-            <span class="oferta__meta">Blog co tydzień · list co tydzień</span>
+            <span class="oferta__meta">Blog i list co tydzień</span>
             <p>
               Piszę teksty psychoedukacyjne — o autopilocie, granicach, wstydzie, złości
               i o tym, co robimy z własnym cieniem. Na blogu publikuję je raz w tygodniu.
@@ -177,7 +176,7 @@
         <span class="etykieta">List co tydzień</span>
         <h2>Jeden e-mail w piątek rano.</h2>
         <p class="lead" style="margin-top:1.5rem; max-width:44ch">
-          Newsletter jest moim głównym miejscem kontaktu z Tobą. Piszę w nim swobodniej
+          Newsletter jest moim głównym miejscem kontaktu z Tobą. Piszę w nim więcej
           niż na blogu i dokładam rzeczy, które akurat mnie zajmują.
         </p>
         <ul class="wpisy-listy">
@@ -198,16 +197,11 @@
           <label class="zgoda" for="zgoda">
             <input type="checkbox" id="zgoda" name="zgoda" required>
             <span>
-              Chcę dostawać newsletter i zgadzam się na przetwarzanie mojego adresu e-mail
-              w tym celu. Wypisać się mogę jednym kliknięciem, w każdej chwili.
-              <a href="prywatnosc.html">Polityka prywatności</a>.
+              Chcę dostawać newsletter i akceptuję <a href="prywatnosc.html">Politykę prywatności</a>.
+              Wypisać się mogę jednym kliknięciem, w każdej chwili.
             </span>
           </label>
           <button class="btn btn--jasny" type="submit">Zapisz mnie</button>
-          <p class="drobne">
-            Bez spamu i bez sprzedawania Ci czegokolwiek co drugi dzień.
-            Zapis potwierdzam od razu — pierwszy list przyjdzie w najbliższy piątek.
-          </p>
           <p class="komunikat" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -219,7 +213,7 @@
     <div class="kontener">
       <div class="naglowek-sekcji">
         <span class="etykieta">Blog</span>
-        <h2>Nowy tekst w każdy piątek.</h2>
+        <h2>Nowy tekst raz w tygodniu.</h2>
       </div>
 
       <!-- PRZYKŁADOWE WPISY — do podmiany na prawdziwe teksty -->
@@ -260,14 +254,13 @@
       </div>
       <div>
         <p class="lead" style="max-width:46ch">
-          Odpowiadam osobiście, zwykle w ciągu dwóch dni roboczych. Napisz, na czym Ci zależy —
-          jeśli szukasz terapii, ustalimy termin pierwszego spotkania.
+          Odpowiadam osobiście, zwykle w ciągu dwóch dni roboczych. Napisz, jeśli chcesz zapytać
+          o warsztaty, zaproponować współpracę albo po prostu odpowiedzieć na któryś z tekstów.
         </p>
         <div class="kontakt__lista">
           <p><span>E-mail</span> <a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a></p>
           <p><span>Instagram</span> <a href="#">@krzysztofbozek</a></p>
         </div>
-        <p style="margin:1.5rem 0 0"><a class="link" href="o-mnie.html#kwalifikacje">Gdzie pracuję i jakie mam kwalifikacje</a></p>
       </div>
     </div>
   </section>
