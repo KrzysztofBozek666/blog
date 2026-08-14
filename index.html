@@ -14,6 +14,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- MailerLite Universal -->
+<script>
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '2570330');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
 
@@ -180,12 +189,8 @@
       </div>
 
       <div>
-        <!-- Podłączenie dostawcy (MailerLite / Buttondown / ConvertKit): patrz README.md -->
+        <!-- Zapis idzie do MailerLite — identyfikatory w script.js (obiekt ML) -->
         <form class="formularz" data-newsletter novalidate>
-          <div class="pole">
-            <label for="imie">Imię (opcjonalnie)</label>
-            <input type="text" id="imie" name="imie" autocomplete="given-name" placeholder="Jak mam się do Ciebie zwracać?">
-          </div>
           <div class="pole">
             <label for="email">Adres e-mail</label>
             <input type="email" id="email" name="email" autocomplete="email" required placeholder="twoj@adres.pl">
@@ -201,7 +206,7 @@
           <button class="btn btn--jasny" type="submit">Zapisz mnie</button>
           <p class="drobne">
             Bez spamu i bez sprzedawania Ci czegokolwiek co drugi dzień.
-            Po zapisie dostaniesz e-mail z prośbą o potwierdzenie.
+            Zapis potwierdzam od razu — pierwszy list przyjdzie w najbliższy piątek.
           </p>
           <p class="komunikat" role="status" aria-live="polite"></p>
         </form>
@@ -246,35 +251,41 @@
     </div>
   </section>
 
-  <!-- ================= KONTAKT / STOPKA ================= -->
-  <footer class="stopka" id="kontakt">
+  <!-- ================= KONTAKT ================= -->
+  <section class="sekcja sekcja--kreska" id="kontakt">
+    <div class="kontener duet">
+      <div>
+        <span class="etykieta">Kontakt</span>
+        <h2 style="max-width:20ch">Jeśli coś z tego jest Ci bliskie — napisz.</h2>
+      </div>
+      <div>
+        <p class="lead" style="max-width:46ch">
+          Odpowiadam osobiście, zwykle w ciągu dwóch dni roboczych. Napisz, na czym Ci zależy —
+          jeśli szukasz terapii, ustalimy termin pierwszego spotkania.
+        </p>
+        <div class="kontakt__lista">
+          <p><span>E-mail</span> <a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a></p>
+          <p><span>Instagram</span> <a href="#">@krzysztofbozek</a></p>
+        </div>
+        <p style="margin:1.5rem 0 0"><a class="link" href="o-mnie.html#kwalifikacje">Gdzie pracuję i jakie mam kwalifikacje</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STOPKA ================= -->
+  <footer class="stopka">
     <div class="kontener">
-      <div class="stopka__grid">
-        <div>
-          <h2 style="max-width:18ch; font-size:var(--fs-h3)">Jeśli coś z tego jest Ci bliskie — napisz.</h2>
-          <p style="margin-top:1.25rem; max-width:38ch">
-            Odpowiadam osobiście, zwykle w ciągu dwóch dni roboczych.
-            Nie prowadzę interwencji kryzysowej — jeśli potrzebujesz pomocy natychmiast,
-            zadzwoń pod <a href="tel:800702222">800 70 2222</a> (całodobowe wsparcie kryzysowe)
-            lub <strong>112</strong>.
-          </p>
-        </div>
+      <div class="stopka__haslo">
+        <h2 style="max-width:18ch; font-size:var(--fs-h3)">Jeśli coś z tego jest Ci bliskie — napisz.</h2>
+        <a class="stopka__mail" href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a>
+      </div>
 
+      <div class="stopka__zastrzezenia">
+        <p class="stopka__tytul">Zastrzeżenia</p>
         <div>
-          <p class="stopka__tytul">Kontakt</p>
-          <ul>
-            <!-- do podmiany na prawdziwe dane -->
-            <li><a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="stopka__tytul">Pracuję w:</p>
-          <ul>
-            <li>Centrum Psychoterapii i Edukacji PRAXE<br>Czechowice-Dziedzice</li>
-            <li>Bielskie Centrum Psychiatrii<br>OLSZÓWKA, Bielsko-Biała</li>
-          </ul>
+          <p>Teksty na tej stronie i w newsletterze mają charakter psychoedukacyjny. Nie są poradą, diagnozą ani formą terapii i nie zastępują kontaktu ze specjalistą. Decyzje podejmujesz samodzielnie i na własną odpowiedzialność.</p>
+          <p>Publikowane treści są moimi prywatnymi opiniami. Nie są stanowiskiem instytucji, w których pracuję, ani organizacji, do których należę.</p>
+          <p>Teksty piszę sam. W redakcji — korekcie, skracaniu i porządkowaniu — korzystam z narzędzi AI.</p>
         </div>
       </div>
 

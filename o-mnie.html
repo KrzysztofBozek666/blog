@@ -10,6 +10,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- MailerLite Universal -->
+<script>
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '2570330');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
 
@@ -126,7 +135,7 @@
   <section class="sekcja sekcja--kreska">
     <div class="kontener">
       <div class="naglowek-sekcji">
-        <span class="etykieta">Kwalifikacje</span>
+        <span class="etykieta" id="kwalifikacje">Kwalifikacje</span>
         <h2>Wykształcenie, doświadczenie, standardy pracy.</h2>
       </div>
 
@@ -141,15 +150,15 @@
         </article>
 
         <article class="oferta__poz zjawia">
-          <h3>Doświadczenie zawodowe</h3>
+          <h3>Pracuję w:</h3>
           <div class="oferta__tresc">
             <p>
-              Bielskie Centrum Psychiatrii OLSZÓWKA w Bielsku-Białej — praca z pacjentami oddziału
-              dziennego rehabilitacji psychiatrycznej.
+              <a href="https://psychiatria.bielsko.pl/" target="_blank" rel="noopener">Bielskie Centrum Psychiatrii OLSZÓWKA</a>
+              w Bielsku-Białej — praca z pacjentami oddziału dziennego rehabilitacji psychiatrycznej.
             </p>
             <p>
-              Centrum Psychoterapii i Edukacji PRAXE w Czechowicach-Dziedzicach — psychoterapia
-              indywidualna osób dorosłych.
+              <a href="https://psychoterapia-domaradzki.pl/krzysztof-bozek/" target="_blank" rel="noopener">Centrum Psychoterapii i Edukacji PRAXE</a>
+              w Czechowicach-Dziedzicach — psychoterapia indywidualna osób dorosłych.
             </p>
           </div>
         </article>
@@ -193,11 +202,12 @@
           </ul>
         </div>
         <div>
-          <p class="stopka__tytul">Pracuję w:</p>
-          <ul>
-            <li>Centrum Psychoterapii i Edukacji PRAXE<br>Czechowice-Dziedzice</li>
-            <li>Bielskie Centrum Psychiatrii<br>OLSZÓWKA, Bielsko-Biała</li>
-          </ul>
+          <p class="stopka__tytul">Zastrzeżenia</p>
+          <div class="stopka__zastrzezenia stopka__zastrzezenia--kol">
+            <p>Teksty mają charakter psychoedukacyjny — nie są poradą, diagnozą ani terapią.</p>
+            <p>To moje prywatne opinie, nie stanowisko instytucji, w których pracuję.</p>
+            <p>Teksty piszę sam; w redakcji korzystam z narzędzi AI.</p>
+          </div>
         </div>
       </div>
       <div class="stopka__dol">

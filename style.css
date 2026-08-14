@@ -663,3 +663,48 @@ a{ color:inherit; }
 }
 .dok .meta p{ margin:0 0 .35rem; }
 .dok .btn{ margin-top:1.5rem; }
+
+
+/* =========================================================
+   Sekcja kontakt + stopka z zastrzeżeniami
+   ========================================================= */
+
+.kontakt__lista{ border-top:1px solid var(--linia); margin-top:2rem; }
+.kontakt__lista p{
+  margin:0; padding:1.1rem 0;
+  border-bottom:1px solid var(--linia);
+  display:flex; flex-wrap:wrap; gap:.5rem 1.5rem;
+  justify-content:space-between; align-items:baseline;
+}
+.kontakt__lista span{
+  font-family:var(--ff-display); font-size:var(--fs-micro);
+  letter-spacing:.16em; text-transform:uppercase; color:var(--kamien);
+}
+.kontakt__lista a{
+  font-size:1.125rem; color:var(--granit);
+  text-decoration:none; border-bottom:1px solid var(--khaki);
+}
+.kontakt__lista a:hover{ border-bottom-color:var(--granit); }
+
+.stopka__haslo{
+  display:flex; flex-wrap:wrap; gap:1.5rem 4rem;
+  justify-content:space-between; align-items:baseline;
+}
+.stopka__mail{
+  font-size:1.125rem; color:rgba(234,235,231,.85);
+  text-decoration:none; border-bottom:1px solid var(--khaki);
+}
+.stopka__mail:hover{ color:var(--mgla); }
+
+.stopka__zastrzezenia{
+  margin-top:clamp(2.5rem,5vw,4rem); padding-top:1.75rem;
+  border-top:1px solid var(--linia-jasna);
+}
+.stopka__zastrzezenia > div,
+.stopka__zastrzezenia--kol{
+  display:grid; gap:.85rem; max-width:78ch;
+  font-size:.875rem; line-height:1.6; color:rgba(234,235,231,.5);
+}
+.stopka__zastrzezenia--kol{ margin:0; padding:0; border:0; }
+.stopka__zastrzezenia p{ margin:0; }
+.stopka .stopka__dol{ margin-top:2rem; }

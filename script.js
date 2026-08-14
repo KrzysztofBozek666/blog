@@ -53,14 +53,57 @@
     elementy.forEach(function (el) { el.classList.add("widac"); });
   }
 
-  /* --- formularz newslettera ---------------------------------
-     Wersja demonstracyjna: nie wysyła danych nigdzie.
-     Podłączenie prawdziwego dostawcy — patrz README.md
+  /* --- formularz newslettera (MailerLite) ---------------------
+     ML.accountId / ML.formId pochodzą z adresu "action"
+     formularza embedded w MailerLite:
+     https://assets.mailerlite.com/jsonp/<accountId>/forms/<formId>/subscribe
      ---------------------------------------------------------- */
+  var ML = { accountId: "2570330", formId: "195771650796422731" };
+
+  /* Natywna wysyłka do ukrytej ramki — omija CORS.
+     Przeglądarka nie zwraca odpowiedzi, więc traktujemy zapis jako udany. */
+  /* MailerLite inicjuje formularz wywołaniem …/takel — bez niego zapisy
+     są odrzucane. Robimy to raz, przy wejściu na stronę. */
+  fetch("https://assets.mailerlite.com/jsonp/" + ML.accountId + "/forms/" + ML.formId + "/takel", { mode: "no-cors" })
+    .catch(function () {});
+
+  function wyslijDoMailerLite(email, imie) {
+    var NAZWA = "ml-cel";
+    var ramka = document.getElementById(NAZWA);
+    if (!ramka) {
+      ramka = document.createElement("iframe");
+      ramka.id = NAZWA;
+      ramka.name = NAZWA;
+      ramka.style.cssText = "position:absolute;width:0;height:0;border:0;left:-9999px";
+      document.body.appendChild(ramka);
+    }
+    var form = document.createElement("form");
+    form.method = "POST";
+    form.target = NAZWA;
+    form.action = "https://assets.mailerlite.com/jsonp/" + ML.accountId + "/forms/" + ML.formId + "/subscribe";
+    form.style.display = "none";
+    function dodaj(nazwa, wartosc) {
+      var i = document.createElement("input");
+      i.type = "hidden";
+      i.name = nazwa;
+      i.value = wartosc;
+      form.appendChild(i);
+    }
+    dodaj("fields[email]", email);
+    if (imie) dodaj("fields[name]", imie);
+    dodaj("ml-submit", "1");
+    dodaj("anticsrf", "true");
+    document.body.appendChild(form);
+    form.submit();
+    setTimeout(function () { form.remove(); }, 1000);
+    return Promise.resolve();
+  }
+
   document.querySelectorAll("form[data-newsletter]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var email = form.querySelector('input[type="email"]');
+      var imie = form.querySelector('input[name="imie"]');
       var zgoda = form.querySelector('input[type="checkbox"]');
       var komunikat = form.querySelector(".komunikat");
 
@@ -75,11 +118,18 @@
         return;
       }
 
-      pokaz(
-        komunikat,
-        "Dziękuję. Na " + email.value + " poszła prośba o potwierdzenie — kliknij link w wiadomości i jesteśmy umówieni."
-      );
-      form.querySelectorAll("input, button").forEach(function (p) { p.disabled = true; });
+      var pola = form.querySelectorAll("input, button");
+      pokaz(komunikat, "Zapisuję…");
+      pola.forEach(function (p) { p.disabled = true; });
+
+      wyslijDoMailerLite(email.value, imie ? imie.value : "")
+        .then(function () {
+          pokaz(komunikat, "Dziękuję, jesteś na liście. Pierwszy list dostaniesz w najbliższy piątek rano.");
+        })
+        .catch(function () {
+          pola.forEach(function (p) { p.disabled = false; });
+          pokaz(komunikat, "Nie udało się połączyć z serwerem. Spróbuj ponownie za chwilę albo napisz na kontakt@krzysztofbozek.pl.");
+        });
     });
   });
 
