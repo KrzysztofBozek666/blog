@@ -787,3 +787,8 @@ section[id], .stopka[id], .sekcja[id], .newsletter[id]{ scroll-margin-top:88px; 
 /* domykająca kreska listy korzyści + pole e-mail nad zgodą */
 .wpisy-listy li:last-child{ border-bottom:1px solid var(--linia-jasna); }
 .szybki__mail{ width:100%; max-width:360px; }
+
+
+/* hero: mniejsze pole e-mail; stopka bez powtórzonego hasła */
+.szybki__mail{ width:100%; max-width:320px; font-size:1rem; padding:.7em .9em; }
+.stopka .stopka__zastrzezenia{ margin-top:0; padding-top:0; border-top:0; }
