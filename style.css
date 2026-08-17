@@ -782,3 +782,8 @@ section[id], .stopka[id], .sekcja[id], .newsletter[id]{ scroll-margin-top:88px; 
 .prezent .etykieta::after{ content:none; }
 .prezent p{ margin:0; color:var(--mgla); font-size:1.0625rem; line-height:1.5; }
 .prezent em{ font-style:italic; }
+
+
+/* domykająca kreska listy korzyści + pole e-mail nad zgodą */
+.wpisy-listy li:last-child{ border-bottom:1px solid var(--linia-jasna); }
+.szybki__mail{ width:100%; max-width:360px; }
