@@ -124,7 +124,7 @@
 
       wyslijDoMailerLite(email.value, imie ? imie.value : "")
         .then(function () {
-          pokaz(komunikat, "Dziękuję, jesteś na liście. Mini e-book „Cztery R” leci na Twoją skrzynkę — pierwszy list w najbliższy piątek.");
+          pokaz(komunikat, "Dziękuję, jesteś na liście. Mini e-book „4R” leci na Twoją skrzynkę — pierwszy list w najbliższy piątek.");
         })
         .catch(function () {
           pola.forEach(function (p) { p.disabled = false; });
