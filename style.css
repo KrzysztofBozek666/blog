@@ -735,3 +735,50 @@ a{ color:inherit; }
 html{ scroll-behavior:smooth; }
 section[id], .stopka[id], .sekcja[id], .newsletter[id]{ scroll-margin-top:88px; }
 @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+
+/* jedno zdanie zamiast kart w sekcji „Czym się zajmuję” */
+.lead-in{
+  font-family:var(--ff-display); color:var(--granit); font-weight:600;
+  font-size:clamp(1.5rem,3.2vw,2.375rem); letter-spacing:-.022em; line-height:1.14;
+  margin:0; max-width:34ch; text-wrap:balance;
+}
+.lead-in a{ color:inherit; text-decoration:none; border-bottom:2px solid var(--khaki); }
+.lead-in a:hover{ border-bottom-color:var(--granit); }
+
+
+/* wpis blogowy */
+.wpis-tresc .post-meta{
+  font-family:var(--ff-display); font-size:var(--fs-micro); font-weight:600;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--kamien);
+  margin:0 0 1.5rem; padding-bottom:.9rem; position:relative;
+}
+.wpis-tresc .post-meta::before{ content:""; position:absolute; left:0; bottom:4px; width:34px; height:1px; background:var(--khaki); }
+.wpis-tresc h1{ font-size:clamp(2rem,4.8vw,3.25rem); margin:0 0 2rem; }
+.wpis-tresc h2{ font-size:clamp(1.375rem,2.4vw,1.75rem); margin:3rem 0 1.25rem; padding-bottom:.7rem; border-bottom:1px solid var(--linia); }
+.wpis-tresc .wyrozniony{
+  font-family:var(--ff-body); font-style:italic; font-weight:300;
+  font-size:clamp(1.375rem,2.6vw,1.75rem); line-height:1.3; color:var(--granit);
+  margin:2rem 0; padding-left:1.5rem; border-left:2px solid var(--khaki);
+}
+.wpis-tresc .wyrozniony--male{ font-size:1.25rem; margin:0; padding:0; border:0; }
+.wpis-tresc .podsumowanie{ margin-top:2.5rem; padding-top:1.75rem; border-top:1px solid var(--linia); }
+.wpis-tresc .cwiczenie{
+  background:var(--papier); padding:clamp(1.75rem,3.5vw,2.5rem);
+  margin-top:clamp(2.5rem,5vw,3.5rem); border-top:1px solid var(--linia);
+}
+.wpis-tresc .cwiczenie h2{ margin:0 0 1.25rem; padding:0; border:0; font-size:clamp(1.25rem,2vw,1.5rem); }
+.wpis-tresc .cwiczenie ul{ list-style:none; margin:0 0 1.15em; padding:0; }
+.wpis-tresc .cwiczenie li{ padding:.6rem 0 .6rem 1.75rem; border-top:1px solid var(--linia); position:relative; }
+.wpis-tresc .cwiczenie li:last-child{ border-bottom:1px solid var(--linia); }
+.wpis-tresc .cwiczenie li::before{ content:""; position:absolute; left:0; top:1.4em; width:12px; height:1px; background:var(--khaki); }
+.newsletter .szybki input[type="email"]{ background:transparent; border:0; border-bottom:1px solid rgba(234,235,231,.34); color:var(--mgla); border-radius:0; }
+
+
+/* obietnica e-booka przy zapisie */
+.prezent{ border:1px solid rgba(178,149,102,.55); padding:clamp(1.25rem,2.5vw,1.75rem); margin-top:2rem; }
+.prezent .etykieta{ color:var(--khaki); margin-bottom:.75rem; padding-bottom:0; }
+.prezent .etykieta::before,
+.prezent .etykieta::after{ content:none; }
+.prezent p{ margin:0; color:var(--mgla); font-size:1.0625rem; line-height:1.5; }
+.prezent em{ font-style:italic; }

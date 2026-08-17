@@ -7,7 +7,9 @@
 <meta name="description" content="Psychoterapeuta Gestalt z Beskidów. Psychoterapia indywidualna, warsztaty rozwojowe i cotygodniowy list o relacjach, kryzysach i odzyskiwaniu kontaktu ze sobą.">
 <meta property="og:title" content="Krzysztof — psychoterapia Gestalt, warsztaty i teksty">
 <meta property="og:description" content="Nie wierzę w życie bez kryzysów. Wierzę, że najtrudniejsze doświadczenia można zamienić w zasoby.">
-<meta property="og:image" content="img/krzysztof-szeroki.jpg">
+<meta property="og:image" content="https://krzysztofbozek.pl/img/og-krzysztof.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +25,8 @@
   ml('account', '2570330');
 </script>
 <!-- End MailerLite Universal -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://krzysztofbozek.pl/">
 </head>
 <body>
 
@@ -36,7 +40,6 @@
     <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
     <nav class="menu" id="menu" aria-label="Główna">
       <a href="o-mnie.html">O mnie</a>
-      <a href="#praca">Jak pracuję</a>
       <a href="#zapis">Newsletter</a>
       <a href="blog.html">Blog</a>
       <a href="#kontakt">Kontakt</a>
@@ -62,11 +65,11 @@
           Raz w tygodniu wysyłam list.
         </p>
         <div class="hero__zapis">
-          <span class="etykieta">Jeden list w piątek rano</span>
+          <span class="etykieta">Mini e-book „Cztery R” na start</span>
           <form class="szybki" data-newsletter novalidate>
             <div class="szybki__pola">
               <input type="email" name="email" autocomplete="email" required placeholder="twoj@adres.pl" aria-label="Adres e-mail">
-              <button class="btn" type="submit">Zapisz się</button>
+              <button class="btn" type="submit">Chcę dostawać list</button>
             </div>
             <label class="zgoda zgoda--jasna" for="zgoda-hero">
               <input type="checkbox" id="zgoda-hero" required>
@@ -112,59 +115,12 @@
           którzy mają odpowiedź na wszystko. Bardziej ufam tym, którzy kilka razy upadli, potrafili
           powiedzieć „nie wiem”, „pomóż mi”, „przepraszam” — i mimo wszystko poszli dalej.
         </p>
+        <p>
+          Prowadzę też psychoterapię indywidualną w nurcie Gestalt w Centrum Psychoterapii
+          i Edukacji PRAXE w Czechowicach-Dziedzicach — jeśli chcesz o to zapytać, napisz na
+          <a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a>.
+        </p>
         <p style="margin-top:1.75rem"><a class="link" href="o-mnie.html">Cała historia i kwalifikacje</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= JAK PRACUJĘ ================= -->
-  <section class="sekcja sekcja--kreska" id="praca">
-    <div class="kontener">
-      <div class="naglowek-sekcji">
-        <span class="etykieta">Czym się zajmuję</span>
-        <h2>Trzy drogi do wspólnej pracy.</h2>
-      </div>
-
-      <div class="oferta">
-        <article class="oferta__poz zjawia">
-          <h3>Psychoterapia indywidualna</h3>
-          <div class="oferta__tresc">
-            <span class="oferta__meta">Osoby dorosłe · nurt Gestalt · 50 minut</span>
-            <p>
-              Pracuję z osobami dorosłymi w Centrum Psychoterapii i Edukacji PRAXE
-              w Czechowicach-Dziedzicach. Spotykamy się regularnie, zwykle raz w tygodniu.
-              Pierwsze spotkania są po to, żeby się poznać i sprawdzić, czy chcesz pracować
-              właśnie ze mną — to Twoja decyzja, nie mój egzamin.
-            </p>
-          </div>
-        </article>
-
-        <article class="oferta__poz zjawia">
-          <h3>Warsztaty rozwojowe</h3>
-          <div class="oferta__tresc">
-            <span class="oferta__meta">Zajęcia i wyjazdy grupowe</span>
-            <p>
-              Kilka razy w roku organizuję warsztaty o relacjach, kryzysie i kontakcie ze sobą.
-              Pracujemy w małej grupie, w konkretnym miejscu i czasie. Terminy ogłaszam
-              najpierw w newsletterze — zwykle wtedy zostaje jeszcze kilka miejsc.
-            </p>
-            <a class="link" href="#kontakt">Dowiedz się o najbliższym terminie</a>
-          </div>
-        </article>
-
-        <article class="oferta__poz zjawia">
-          <h3>Teksty i newsletter</h3>
-          <div class="oferta__tresc">
-            <span class="oferta__meta">Blog i list co tydzień</span>
-            <p>
-              Piszę teksty psychoedukacyjne — o autopilocie, granicach, wstydzie, złości
-              i o tym, co robimy z własnym cieniem. Na blogu publikuję je raz w tygodniu.
-              W newsletterze dostajesz więcej: polecajki, ćwiczenia i rzeczy, których nie
-              wrzucam na stronę.
-            </p>
-            <a class="link" href="blog.html">Zobacz ostatnie wpisy</a>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -174,16 +130,20 @@
     <div class="kontener newsletter__grid">
       <div>
         <span class="etykieta">List co tydzień</span>
-        <h2>Jeden e-mail w piątek rano.</h2>
+        <h2 style="max-width:20ch">Co tydzień jedno ćwiczenie, które możesz zrobić od razu.</h2>
         <p class="lead" style="margin-top:1.5rem; max-width:44ch">
           Newsletter jest moim głównym miejscem kontaktu z Tobą. Piszę w nim więcej
           niż na blogu i dokładam rzeczy, które akurat mnie zajmują.
         </p>
+        <div class="prezent">
+          <span class="etykieta">Na start</span>
+          <p>Zaraz po zapisie dostajesz mini e-book <em>Cztery R</em> — metodę z ćwiczeniami do zrobienia po kolei, w swoim tempie.</p>
+        </div>
+
         <ul class="wpisy-listy">
           <li>Krótki tekst — o relacjach, kryzysach, codziennej psychologii.</li>
           <li>Jedno ćwiczenie do zrobienia w ciągu tygodnia.</li>
           <li>Polecajki: książka, podcast, film, czasem czyjś dobry tekst.</li>
-          <li>Terminy warsztatów, zanim ogłoszę je gdziekolwiek indziej.</li>
         </ul>
       </div>
 
@@ -201,7 +161,7 @@
               Wypisać się mogę jednym kliknięciem, w każdej chwili.
             </span>
           </label>
-          <button class="btn btn--jasny" type="submit">Zapisz mnie</button>
+          <button class="btn btn--jasny" type="submit">Chcę dostawać list</button>
           <p class="komunikat" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -219,29 +179,16 @@
       <!-- PRZYKŁADOWE WPISY — do podmiany na prawdziwe teksty -->
       <ul class="wpisy">
         <li class="wpis zjawia">
-          <span class="wpis__meta"><time datetime="2026-08-06">6 sierpnia 2026</time> · 5 min</span>
+          <span class="wpis__meta"><time datetime="2026-08-13">13 sierpnia 2026</time> · 6 min</span>
           <div>
-            <h3><a href="wpis-przyklad.html">Kiedy warto pójść na terapię</a></h3>
-            <p>Nie trzeba mieć diagnozy ani „wystarczająco dużego” problemu. Czasem wystarczy, że od dłuższego czasu żyjesz obok siebie.</p>
-          </div>
-        </li>
-        <li class="wpis zjawia">
-          <span class="wpis__meta"><time datetime="2026-07-30">30 lipca 2026</time> · 4 min</span>
-          <div>
-            <h3><a href="wpis-przyklad.html">Złość nie jest wrogiem</a></h3>
-            <p>Większość z nas uczono, że złość to problem do opanowania. A ona zwykle mówi coś konkretnego o naszych granicach.</p>
-          </div>
-        </li>
-        <li class="wpis zjawia">
-          <span class="wpis__meta"><time datetime="2026-07-23">23 lipca 2026</time> · 6 min</span>
-          <div>
-            <h3><a href="wpis-przyklad.html">Trzy zdania, które trudno powiedzieć</a></h3>
-            <p>„Nie wiem”, „pomóż mi”, „przepraszam”. Krótkie, proste — i dla wielu osób najtrudniejsze zdania w relacji.</p>
+            <h3><a href="cztery-r.html">Cztery R — metoda, z którą pracuję</a></h3>
+            <p>Nie szukam braków. Szukam zasobów, które już masz, ale z różnych powodów
+            przestałeś z nich korzystać. Relacje, relaks, rutyna i rytuał — jak dziś
+            wyglądają twoje cztery R?</p>
           </div>
         </li>
       </ul>
 
-      <p style="margin-top:2.5rem"><a class="link" href="blog.html">Wszystkie wpisy</a></p>
     </div>
   </section>
 
@@ -259,7 +206,6 @@
         </p>
         <div class="kontakt__lista">
           <p><span>E-mail</span> <a href="mailto:kontakt@krzysztofbozek.pl">kontakt@krzysztofbozek.pl</a></p>
-          <p><span>Instagram</span> <a href="#">@krzysztofbozek</a></p>
         </div>
       </div>
     </div>
@@ -299,8 +245,8 @@
   <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="popup-tytul">
     <button class="modal__zamknij" type="button" data-popup-zamknij aria-label="Zamknij">&times;</button>
     <span class="etykieta">List co tydzień</span>
-    <h2 id="popup-tytul">Zostaw adres — w piątek dostaniesz pierwszy list.</h2>
-    <p>Krótki tekst o relacjach i kryzysach, jedno ćwiczenie na tydzień i terminy warsztatów, zanim ogłoszę je gdziekolwiek indziej.</p>
+    <h2 id="popup-tytul">Zostaw adres — dostaniesz mini e-book „Cztery R”.</h2>
+    <p>Metoda z ćwiczeniami do zrobienia po kolei, w swoim tempie. Potem raz w tygodniu krótki tekst i jedno ćwiczenie.</p>
     <form class="formularz" data-newsletter data-popup-form novalidate>
       <div class="pole">
         <label for="email-popup">Adres e-mail</label>
@@ -310,7 +256,7 @@
         <input type="checkbox" id="zgoda-popup" required>
         <span>Zgadzam się na przetwarzanie mojego adresu e-mail w celu wysyłki newslettera. <a href="prywatnosc.html">Polityka prywatności</a>.</span>
       </label>
-      <button class="btn btn--jasny modal__btn" type="submit">Zapisz mnie</button>
+      <button class="btn btn--jasny modal__btn" type="submit">Chcę dostawać list</button>
       <p class="komunikat" role="status" aria-live="polite"></p>
     </form>
     <button class="modal__nie" type="button" data-popup-zamknij>Nie teraz</button>
