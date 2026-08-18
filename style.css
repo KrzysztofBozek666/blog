@@ -792,3 +792,8 @@ section[id], .stopka[id], .sekcja[id], .newsletter[id]{ scroll-margin-top:88px; 
 /* hero: mniejsze pole e-mail; stopka bez powtórzonego hasła */
 .szybki__mail{ width:100%; max-width:320px; font-size:1rem; padding:.7em .9em; }
 .stopka .stopka__zastrzezenia{ margin-top:0; padding-top:0; border-top:0; }
+
+
+/* hero: w kolumnowym formularzu flex-basis dotyczy wysokości — pole trzyma własny rozmiar */
+.szybki > .szybki__mail{ flex:0 0 auto; height:auto; align-self:flex-start; }
+.szybki__pola > .szybki__mail{ flex:1 1 240px; }
